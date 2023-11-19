@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400&display=swap');
+
+
+.aboutme--container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 6em;
+    padding: 6em 0 ;
+}
+
+.aboutmepara{
+    width: 65%;
+    line-height: 162.5%; /* 48.75px */
+letter-spacing: 0.6px;
+    font-family: Raleway ;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.skillphoto{
+
+}
+
+.skillsection{
+
+}
+
+.imagecontainer{
+
+}

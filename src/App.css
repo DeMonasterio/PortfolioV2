@@ -1,0 +1,89 @@
+
+:root{
+  --cursorImage: url("./assets/icons/pointer.svg")
+}
+
+
+
+*{
+  /* outline: 1px solid red; */
+  margin: 0;
+  padding: 0;
+  cursor: url("./assets/icons/pointer.svg") 0 0 , auto ;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #DDDEDF;
+}
+
+
+
+.cursorEstilo{
+  display: flex;
+  position: fixed;
+  z-index:50;
+  
+  width: 6px;
+  height: 6px;
+  
+  background-color: #3498db;
+  border-radius: 50%;
+  transition: 10ms;
+  animation: animateCursor 15s linear  infinite; 
+}
+
+.cursorEstilo2{
+  display: flex;
+  position: fixed;
+  z-index:50;
+  
+  width: 5px;
+  height: 5px;
+
+  background-color: #C05E01;
+  border-radius: 50%;
+  transition: 1ms;
+  animation: animateCursor 10s reverse infinite; 
+}
+
+
+@keyframes animateCursor {
+  0% {
+      transform: translate(0%, 170%) rotate(0deg) scale(1)  ;
+      background-color: #3498db;
+  }
+
+  12% {
+      background-color: rgb(255, 0, 0);
+      transform: translate(110%, 150%) rotate(45deg) scale(1.2)  ;
+  }
+  
+  25% {
+      background-color: #3498db;
+      transform: translate(170%, 0%) rotate(90deg) scale(0.9)  ;
+  }
+
+  50% {
+      transform: translate(0%, -150%) rotate(180deg) scale(1.5)    ;
+      background-color: rgb(93, 212, 228)
+  }
+  
+  62%{
+      transform: translate(-110%, -130%) rotate(180deg) scale(1.5);
+      background-color: rgb(247, 151, 221);
+  }
+  
+  75% {
+      background-color: rgb(44, 179, 94);
+      transform: translate(-170%, 0%) rotate(270deg) scale(0.8)  ;
+  }
+
+  100% {
+      background-color: #3498db;
+      transform: translate(0%, 170%) rotate(360deg) scale(1) ;
+  }
+}
