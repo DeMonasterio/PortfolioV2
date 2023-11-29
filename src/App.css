@@ -9,7 +9,7 @@
   /* outline: 1px solid red; */
   margin: 0;
   padding: 0;
-  cursor: url("./assets/icons/pointer.svg") 0 0 , auto ;
+  cursor: url("./assets/icons/pointer.svg") 0 0 , auto;
 }
 
 html{
@@ -22,32 +22,41 @@ body{
 
 
 
+
+
+
+
+
 .cursorEstilo{
-  display: flex;
-  position: fixed;
-  z-index:50;
-  
-  width: 6px;
-  height: 6px;
-  
-  background-color: #3498db;
-  border-radius: 50%;
-  transition: 10ms;
-  animation: animateCursor 15s linear  infinite; 
+  display: none;
 }
 
-.cursorEstilo2{
-  display: flex;
-  position: fixed;
-  z-index:50;
-  
-  width: 5px;
-  height: 5px;
+@media (min-width: 600px) {
 
-  background-color: #C05E01;
-  border-radius: 50%;
-  transition: 1ms;
-  animation: animateCursor 10s reverse infinite; 
+  .cursorEstilo{
+    display: flex;
+    position: fixed;
+    z-index:50; 
+    width: 6px;
+    height: 6px;
+    
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: animateCursor 15s linear  infinite; 
+  }
+  
+  .cursorEstilo2{
+    display: flex;
+    position: fixed;
+    z-index:50;
+    
+    width: 5px;
+    height: 5px;
+  
+    background-color: #C05E01;
+    border-radius: 50%;
+    animation: animateCursor 10s reverse infinite; 
+  }
 }
 
 

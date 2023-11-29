@@ -49,9 +49,9 @@ export const Header = ({ actualPage }) => {
 
     <header>
       <div className={classMenu ? "menu__active" : "menu__button"} onClick={toggleMenu} >
+        {classMenu ?  "" : <><span className="menu__label"></span>
         <span className="menu__label"></span>
-        <span className="menu__label"></span>
-        <span className="menu__label"></span>
+        <span className="menu__label"></span></>}
         {classMenu ? <NavBar actualPage={actualPage} /> : ""}
       </div>
 

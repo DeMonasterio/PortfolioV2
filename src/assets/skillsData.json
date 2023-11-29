@@ -1,0 +1,45 @@
+{
+    "Technology": [
+      {
+        "name": "Java",
+        "image": "javaIcon",
+        "id": 1
+      },
+      {
+        "name": "React",
+        "image": "reactIcon",
+        "id": 2
+      },
+      {
+        "name": "Figma",
+        "image": "figmaIcon",
+        "id": 3
+      },
+      {
+        "name": "JavaScript",
+        "image": "../../assets/techIcons/javascript.svg",
+        "id": 4
+      },
+      {
+        "name": "HTML",
+        "image": "htmlIcon",
+        "id": 5
+      },
+      {
+        "name": "CSS",
+        "image": "cssIcon",
+        "id": 6
+      },
+      {
+        "name": "MySQL",
+        "image": "mysqlIcon",
+        "id": 7
+      },
+      {
+        "name": "Express",
+        "image": "expressIcon",
+        "id": 8
+      }
+    ]
+  }
+  

@@ -2,7 +2,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {useMousePosition} from"./hooks/useMousePosition.jsx"
 // Components
-import { Header } from "./components/Header/Header.jsx";
+
+
+
 // Pages
 import { Home } from "./pages/Home/Home.jsx";
 import { About } from "./pages/About/About.jsx";
@@ -10,28 +12,29 @@ import { Projects } from "./pages/Projects/Projects.jsx";
 import { Contact } from "./pages/Contact/Contact.jsx";
 // Others imports
 import './App.css'
-import {useState } from "react";
+import { useState } from "react";
 
 function App() {
  
   const [actualPage, setactualPage] = useState()
 
-  const mousePosition = useMousePosition();
 
- 
 
+  // const mousePosition = useMousePosition();
+
+  const { x, y } = useMousePosition();
 
 
     const cursorStyle = {
-      top: `${mousePosition.y}px`,
-      left: `${mousePosition.x}px`,
+      top: `${y}px`,
+      left: `${x}px`,
     };
     
 
   return (
     <>
-     <div className="cursorEstilo"  style={cursorStyle} />
-      <div className="cursorEstilo2"  style={cursorStyle} />
+      <div className="cursorEstilo"  style={cursorStyle}/>
+      <div className="cursorEstilo2"  style={cursorStyle} /> 
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home setactualPage={setactualPage} actualPage={actualPage}  />} />
@@ -46,4 +49,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

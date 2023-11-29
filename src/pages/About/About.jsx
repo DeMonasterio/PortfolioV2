@@ -2,6 +2,7 @@ import "./About.css";
 
 import { Header } from "../../components/Header/Header.jsx";
 import { Skills } from "../../components/Skills/Skills.jsx";
+import meImage from "../../assets/images/meImage.png"
 
 export const About = ({ setactualPage, actualPage }) => {
   setactualPage("About");
@@ -25,11 +26,9 @@ export const About = ({ setactualPage, actualPage }) => {
         </p>
         </div>
         <div className="skillphoto">
-            <div className="skillsection">
             <Skills/>
-            </div>
             <div className="imagecontainer">
-                <img src="" alt="" />
+                <img src={meImage} className="meImage" alt="Foto de Juan" />
             </div>
         </div>
 

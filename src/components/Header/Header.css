@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Chathura:wght@100;300;400;700&display=swap');
 
 
-.cursorEstilo{
-    display: none;
-}
-
-
 
 
 
@@ -28,11 +23,12 @@
 .menu__active{
     position: absolute;
     z-index: 30;
-    background-color: #252E32;
-    width: 60%;
+    background-color: #DDDEDF;
+    width: 0%;
     height: 100vh;
     overflow-y: hidden;
-    color: #DDDEDF;
+    color: transparent;
+    animation: showMenu forwards ease-in-out .3s;
 }
 
 
@@ -92,7 +88,7 @@ display: none;
 .navbar__item{
     font-family: Chathura;
     font-size: 35px;
-    cursor: pointer;
+    padding: 0 1vw;
 }
 .nav__anchor{
     text-decoration: none;
@@ -184,7 +180,17 @@ display: none;
 
 
 
-
+@keyframes showMenu {
+    90%{
+        width: 60%;
+        color:transparent;
+    }
+    100%{
+        width: 60%;
+        color: #DDDEDF;
+    background-color: #252E32;
+    }
+}
 
 @keyframes showTitleMobile {
     100%{

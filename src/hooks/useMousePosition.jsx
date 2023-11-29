@@ -1,18 +1,18 @@
-// useMousePosition.jsx
+// useMousePosition.js
 import { useEffect, useState } from 'react';
 
 const useMousePosition = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
+  const updatePosition = (event) => {
+    setPosition({ x: event.clientX, y: event.clientY });
+  };
+
   useEffect(() => {
-    const updateMousePosition = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-    };
-
-    const debounceUpdate = debounce(updateMousePosition, 0);
-
-    const handleMouseMove = (e) => {
-      debounceUpdate(e);
+    const handleMouseMove = (event) => {
+      requestAnimationFrame(() => {
+        updatePosition(event);
+      });
     };
 
     document.addEventListener('mousemove', handleMouseMove);
@@ -23,14 +23,6 @@ const useMousePosition = () => {
   }, []);
 
   return position;
-};
-
-const debounce = (func, delay) => {
-  let timeoutId;
-  return function (...args) {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => func.apply(this, args), delay);
-  };
 };
 
 export {useMousePosition};
