@@ -32,6 +32,12 @@ export const About = ({ setactualPage, actualPage }) => {
             </div>
         </div>
 
+        <div>
+          <span></span>
+          <h2>Estudios certificados</h2>
+          <span></span>
+        </div>
+
       </main>
     </>
   );

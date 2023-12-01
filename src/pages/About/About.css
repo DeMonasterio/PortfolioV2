@@ -60,6 +60,7 @@ flex-direction: column;
 
 @media (min-width: 700px) {   
 .skillphoto{
+    padding: 2em 5em;
 
 }
 
