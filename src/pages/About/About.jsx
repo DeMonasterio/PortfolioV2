@@ -3,6 +3,9 @@ import "./About.css";
 import { Header } from "../../components/Header/Header.jsx";
 import { Skills } from "../../components/Skills/Skills.jsx";
 import meImage from "../../assets/images/meImage.png"
+import badgeFullStack from "../../assets/badges/DiplomaUtn.png"
+import badgeEmpujar from "../../assets/badges/DiplomaEmpujar.png"
+import badgeCompañerismo from "../../assets/badges/EmpujarCompañerismo.png"
 
 export const About = ({ setactualPage, actualPage }) => {
   setactualPage("About");
@@ -32,9 +35,13 @@ export const About = ({ setactualPage, actualPage }) => {
             </div>
         </div>
 
-        <div>
           <span></span>
           <h2>Estudios certificados</h2>
+        <div className="badgeImages">
+
+          <img src={badgeFullStack} alt="" />
+          <img src={badgeEmpujar} alt="" />
+          <img src={badgeCompañerismo} alt="" />
           <span></span>
         </div>
 

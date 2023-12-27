@@ -37,6 +37,11 @@ flex-direction: column;
 
 }
 
+.badgeImages{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
 
 @media (min-width: 600px) {
 
