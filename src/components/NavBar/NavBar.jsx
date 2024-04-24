@@ -96,11 +96,14 @@ export default function NavBar({ actualPage }) {
     }
 
     return (
-        <nav className="navbar">
+        <>
+        <nav className={actualPage != "Home" ? "navbarsubline navbar":"navbar"}>
             <ul className="navbar__list">
                 {getLinks()}
             </ul>
         </nav>
+            <div className={actualPage != "Home" ? "AnimateLine": ""}></div>
+        </>
     )
 
 }

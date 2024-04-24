@@ -7,7 +7,7 @@ export const Home = ({setactualPage, actualPage } ) => {
     return(
         <>
         <Header actualPage={actualPage}/>
-        <h1>HolaHome</h1>
+        
         </>
     )
 }

@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 export const Header = ({ actualPage }) => {
   const [Icon, setIcon] = useState();
-
+  
   useEffect(() => {
     const loadIcon = async () => {
       let loadedIcon;
@@ -41,6 +41,12 @@ export const Header = ({ actualPage }) => {
   };
 
 
+  const [isIconLoaded, setisIconLoaded] = useState(false);
+
+  const handleLoadedIcon = () => {
+    setisIconLoaded(!isIconLoaded)
+  }
+
 
 
 
@@ -57,10 +63,11 @@ export const Header = ({ actualPage }) => {
 
 
       <div className="hero__container">
-        <div className="toAnimate">
-        </div>
+        
+        <div className={isIconLoaded ? "loadedAnimation toAnimate" : "toAnimate"} ></div>
+
         {actualPage === "Home" ? <></> : <div className="space"></div>}
-        <img src={Icon} alt="" className="hero__title" />
+        <img src={Icon} alt="" onLoad={handleLoadedIcon} className="hero__title" />
         {actualPage === "Home" ? <img src={Subtitle} alt="" className="hero__subtitle" /> : <></>}
       </div>
 

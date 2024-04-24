@@ -4,10 +4,10 @@
 .aboutme--container{
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: justify;
     align-items: center;
     gap: 3em;
-    padding: 3em 0 ;
+    padding: 3em 0;
 }
 
 .aboutmepara{
@@ -37,13 +37,12 @@ flex-direction: column;
 
 }
 
-.badgeImages{
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-}
-
 @media (min-width: 600px) {
+
+    .aboutme--container{
+        text-align: center
+        ;
+    }
 
     .aboutmepara{
         padding: 0 2em;

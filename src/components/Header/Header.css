@@ -2,7 +2,9 @@
 
 
 
-
+header{
+    overflow: hidden;
+}
 
 
 /* ESTO ES EL MENU HAMBURGUESA */
@@ -35,6 +37,7 @@
 .navbar{
 display: none;
 }
+
 .menu__active  .navbar {
     display: flex;
 }
@@ -64,8 +67,11 @@ display: none;
     width: 100vw;
     height: 100%;
     background-color: #DDDEDF;
-    animation: forwards showTitleMobile 3s;
+    
+}
 
+.loadedAnimation{
+    animation: forwards showTitleMobile 3s;
 }
 
 .hero__title{
@@ -88,9 +94,10 @@ display: none;
 .navbar__item{
     font-family: Chathura;
     font-size: 35px;
-    padding: 0 1vw;
+    /* padding: 0 1vw; */
 }
 .nav__anchor{
+    padding: 0 1vw;
     text-decoration: none;
     /* padding: .5em .5em 0; */
     color: inherit;
@@ -121,10 +128,11 @@ display: none;
         display: none;
     }
    
-    .toAnimate{
-    animation: forwards showTitle 3s;
-    }
 
+    .loadedAnimation{
+        animation: forwards showTitle 3s;
+
+    }
 
     .hero__subtitle{
         display: inline;
@@ -142,9 +150,24 @@ display: none;
     .navbar{
         display: flex;
         justify-content: center; 
+        position: relative;
+    }
+    .navbarsubline{
         border-bottom: 1px solid #252E32;
+
     }
     
+    
+    .AnimateLine{
+        display: flex;
+        position: relative;
+        bottom: 1px;
+        width: 100%;
+        border-top: 1px solid #DDDEDF;
+        animation: forwards showNavbarLine 1.5s linear;
+    }
+
+
     .navbar__list{
         display: flex;
         flex-direction: row;
@@ -191,7 +214,6 @@ display: none;
     background-color: #252E32;
     }
 }
-
 @keyframes showTitleMobile {
     100%{
         transform: translateX(100vw) rotate(26deg);
@@ -205,4 +227,13 @@ display: none;
         transform: translateX(100vw) rotate(26deg);
     }
     
+}
+
+@keyframes showNavbarLine{
+    0%{
+        transform: translateX(0vw);
+    }
+    100%{
+        transform: translateX(100vw);
+    }
 }

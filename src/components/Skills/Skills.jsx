@@ -71,8 +71,3 @@ export const Skills = () => {
   );
 };
 
-{/* <article className="skillCard" key={tech.id}>
-        <h3>{tech.name}</h3> 
-        <img src={module.default} alt={`Imagen ${route}`} />
-</article>  */}
-
